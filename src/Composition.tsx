@@ -1,4 +1,5 @@
 import { CalculateMetadataFunction, Composition } from "remotion";
+import LectureBackground from "./LectureBackground";
 
 type Props = {};
 
@@ -10,8 +11,8 @@ export const MyComposition = () => {
   return (
     <Composition
       id="MyComp"
-      component={MyComponent}
-      durationInFrames={60}
+      component={LectureBackground}
+      durationInFrames={900}
       fps={30}
       width={1280}
       height={720}
