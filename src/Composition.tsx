@@ -12,10 +12,10 @@ export const MyComposition = () => {
     <Composition
       id="MyComp"
       component={LectureBackground}
-      durationInFrames={900}
+      durationInFrames={610}
       fps={30}
-      width={1280}
-      height={720}
+      width={1920}
+      height={1080}
       calculateMetadata={calculateMetadata}
     />
   );
