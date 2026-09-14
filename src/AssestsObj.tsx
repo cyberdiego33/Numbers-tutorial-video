@@ -29,7 +29,7 @@ const AssetsObject = [
     romaji: "four",
     illustration: "images/Three-fingers.png",
     narration: "audio/Yon-narration.wav",
-    duration: 610,
+    duration: 565,
   },
   {
     kanjiName: "go",
@@ -37,7 +37,7 @@ const AssetsObject = [
     romaji: "five",
     illustration: "images/Three-fingers.png",
     narration: "audio/Go-narration.wav",
-    duration: 610,
+    duration: 815,
   },
   {
     kanjiName: "roku",
@@ -45,7 +45,7 @@ const AssetsObject = [
     romaji: "six",
     illustration: "images/Three-fingers.png",
     narration: "audio/Roku-narration.wav",
-    duration: 610,
+    duration: 770,
   },
   {
     kanjiName: "shichi",
@@ -53,7 +53,7 @@ const AssetsObject = [
     romaji: "seven",
     illustration: "images/Three-fingers.png",
     narration: "audio/Shichi-narration.wav",
-    duration: 610,
+    duration: 500,
   },
   {
     kanjiName: "hachi",
@@ -61,7 +61,7 @@ const AssetsObject = [
     romaji: "eight",
     illustration: "images/Three-fingers.png",
     narration: "audio/Hachi-narration.wav",
-    duration: 610,
+    duration: 490,
   },
   {
     kanjiName: "kyuu",
@@ -69,7 +69,7 @@ const AssetsObject = [
     romaji: "nine",
     illustration: "images/Three-fingers.png",
     narration: "audio/Kyuu-narration.wav",
-    duration: 610,
+    duration: 535,
   },
   {
     kanjiName: "juu",
@@ -77,7 +77,39 @@ const AssetsObject = [
     romaji: "ten",
     illustration: "images/Three-fingers.png",
     narration: "audio/Juu-narration.wav",
-    duration: 610,
+    duration: 620,
+  },
+  {
+    kanjiName: "afterJuu",
+    kanji: "百 - 万",
+    romaji: "Hyaku to Man",
+    illustration: "images/Three-fingers.png",
+    narration: "audio/Afterjuu-narration.wav",
+    duration: 330,
+  },
+  {
+    kanjiName: "Hyaku",
+    kanji: "百",
+    romaji: "Hundred",
+    illustration: "images/Three-fingers.png",
+    narration: "audio/Hyaku-narration.wav",
+    duration: 515,
+  },
+  {
+    kanjiName: "sen",
+    kanji: "千",
+    romaji: "thousand",
+    illustration: "images/Three-fingers.png",
+    narration: "audio/Sen-narration.wav",
+    duration: 650,
+  },
+  {
+    kanjiName: "man",
+    kanji: "万",
+    romaji: "ten thousand",
+    illustration: "images/Three-fingers.png",
+    narration: "audio/Man-narration.wav",
+    duration: 940,
   },
 ];
 

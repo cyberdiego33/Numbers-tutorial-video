@@ -9,7 +9,8 @@ const calculateMetadata: CalculateMetadataFunction<Props> = () => {
 };
 
 export const MyComposition = () => {
-  const calTotalDuration = getStart(3);
+  const calTotalDuration = getStart(14);
+  // const calTotalDuration = 1000;
 
   return (
     <Composition
