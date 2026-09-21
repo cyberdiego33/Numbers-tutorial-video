@@ -84,11 +84,11 @@ export const Ichi = () => {
         <MnemonicsContent style={{ left: `${mnemonicsMoveRight}%` }}>
           <Img
             style={{ width: 700, height: 400 }}
-            src={staticFile(KanjiAssets.illustration)}
+            src={staticFile(KanjiAssets.illustration1)}
           />
           <Img
             style={{ width: 700, height: 400, opacity: illustrationOpacity }}
-            src={staticFile("images/One-finger.png")}
+            src={staticFile(KanjiAssets.illustration2)}
           />
         </MnemonicsContent>
 

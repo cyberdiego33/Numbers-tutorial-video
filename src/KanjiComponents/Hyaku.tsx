@@ -72,7 +72,7 @@ const Hyaku = function () {
         <MnemonicsContent style={{ left: `${MnemonicsMoveRight}%` }}>
           <Img
             src={staticFile(kanjiAssets.illustration)}
-            style={{ width: 700, height: 400 }}
+            style={{ width: 700, height: 600 }}
           />
         </MnemonicsContent>
         <InfoContent style={{ left: `${InfoMoveRight}%` }}>

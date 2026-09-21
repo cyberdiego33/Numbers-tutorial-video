@@ -67,7 +67,7 @@ const Hachi = function () {
         <MnemonicsContent style={{ left: `${MnemonicsMoveRight}%` }}>
           <Img
             src={staticFile(kanjiAssets.illustration)}
-            style={{ width: 700, height: 400 }}
+            style={{ width: 700, height: 500 }}
           />
         </MnemonicsContent>
         <InfoContent style={{ left: `${InfoMoveRight}%` }}>
