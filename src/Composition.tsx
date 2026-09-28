@@ -1,6 +1,10 @@
 import { CalculateMetadataFunction, Composition } from "remotion";
-import LectureBackground from "./LectureBackground";
-import { getStart } from "./AssestsObj";
+import { TotalDurations } from "./assets/AssestsObj";
+import VideoComponent from "./Components/FullVideoCompnents/VideoComponent";
+
+// import FloatingKanji from "./Components/OpeningComponent/FloatingKanji";
+// import LectureBackground from "./Components/LectureComponents/LectureBackground";
+// import ClosingComponent from "./Components/ClosingComponent/ClosingComponent";
 
 type Props = {};
 
@@ -9,14 +13,14 @@ const calculateMetadata: CalculateMetadataFunction<Props> = () => {
 };
 
 export const MyComposition = () => {
-  const calTotalDuration = getStart(14);
-  // const calTotalDuration = 1000;
+  const { videoTotalduration } = TotalDurations;
 
   return (
     <Composition
       id="MyComp"
-      component={LectureBackground}
-      durationInFrames={calTotalDuration}
+      component={VideoComponent}
+      // component={ClosingComponent}
+      durationInFrames={videoTotalduration}
       fps={30}
       width={1920}
       height={1080}

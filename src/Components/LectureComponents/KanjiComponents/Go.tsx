@@ -8,7 +8,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import styled from "styled-components";
-import AssetsObject from "../AssestsObj";
+import LectureAssetsObj from "../../../assets/AssestsObj";
 
 const Container = styled(AbsoluteFill)`
   position: relative;
@@ -31,7 +31,7 @@ const MainKanji = styled.p``;
 
 const Go = function () {
   const frame = useCurrentFrame();
-  const kanjiAssets = AssetsObject[4];
+  const kanjiAssets = LectureAssetsObj[4];
 
   const MainKanjiOpacity = interpolate(frame, [0, 10], [0, 1], {
     easing: Easing.inOut(Easing.ease),

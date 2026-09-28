@@ -8,7 +8,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import styled from "styled-components";
-import AssetsObject from "../AssestsObj";
+import LectureAssetsObj from "../../../assets/AssestsObj";
 
 const Container = styled(AbsoluteFill)`
   position: relative;
@@ -29,11 +29,16 @@ const InfoContent = styled.div`
 
 const MainKanji = styled.p``;
 
-const Kyuu = function () {
+const Sen = function () {
   const frame = useCurrentFrame();
-  const kanjiAssets = AssetsObject[8];
+  const kanjiAssets = LectureAssetsObj[12];
 
   const MainKanjiOpacity = interpolate(frame, [0, 10], [0, 1], {
+    easing: Easing.inOut(Easing.ease),
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const mainKanjiScale = interpolate(frame, [190, 195, 200], [1, 1.1, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -43,19 +48,19 @@ const Kyuu = function () {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const MainEnglishTransOpacity = interpolate(frame, [75, 85], [0, 1], {
+  const MainEnglishTransOpacity = interpolate(frame, [100, 110], [0, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const MnemonicsMoveRight = interpolate(frame, [130, 140], [-100, 30], {
+  const MnemonicsMoveRight = interpolate(frame, [210, 220], [-100, 30], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const InfoMoveRight = interpolate(frame, [130, 140], [50, 70], {
+  const InfoMoveRight = interpolate(frame, [210, 220], [50, 70], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -73,7 +78,10 @@ const Kyuu = function () {
         <InfoContent style={{ left: `${InfoMoveRight}%` }}>
           <MainKanji
             className="rubik-font"
-            style={{ opacity: `${MainKanjiOpacity}` }}
+            style={{
+              opacity: `${MainKanjiOpacity}`,
+              transform: `scale(${mainKanjiScale})`,
+            }}
           >
             {kanjiAssets.kanji}
           </MainKanji>
@@ -105,4 +113,4 @@ const Kyuu = function () {
   );
 };
 
-export default Kyuu;
+export default Sen;

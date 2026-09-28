@@ -8,7 +8,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import styled from "styled-components";
-import AssetsObject from "../AssestsObj";
+import LectureAssetsObj from "../../../assets/AssestsObj";
 
 const Container = styled(AbsoluteFill)`
   position: relative;
@@ -29,16 +29,11 @@ const InfoContent = styled.div`
 
 const MainKanji = styled.p``;
 
-const Hyaku = function () {
+const Yon = function () {
   const frame = useCurrentFrame();
-  const kanjiAssets = AssetsObject[11];
+  const kanjiAssets = LectureAssetsObj[3];
 
   const MainKanjiOpacity = interpolate(frame, [0, 10], [0, 1], {
-    easing: Easing.inOut(Easing.ease),
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const mainKanjiScale = interpolate(frame, [190, 195, 200], [1, 1.1, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -72,16 +67,13 @@ const Hyaku = function () {
         <MnemonicsContent style={{ left: `${MnemonicsMoveRight}%` }}>
           <Img
             src={staticFile(kanjiAssets.illustration)}
-            style={{ width: 700, height: 600 }}
+            style={{ width: 700, height: 400 }}
           />
         </MnemonicsContent>
         <InfoContent style={{ left: `${InfoMoveRight}%` }}>
           <MainKanji
             className="rubik-font"
-            style={{
-              opacity: `${MainKanjiOpacity}`,
-              transform: `scale(${mainKanjiScale})`,
-            }}
+            style={{ opacity: `${MainKanjiOpacity}` }}
           >
             {kanjiAssets.kanji}
           </MainKanji>
@@ -113,4 +105,4 @@ const Hyaku = function () {
   );
 };
 
-export default Hyaku;
+export default Yon;

@@ -8,7 +8,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import styled from "styled-components";
-import AssetsObject from "../AssestsObj";
+import LectureAssetsObj from "../../../assets/AssestsObj";
 
 const Container = styled(AbsoluteFill)`
   position: relative;
@@ -29,9 +29,9 @@ const InfoContent = styled.div`
 
 const MainKanji = styled.p``;
 
-const Hachi = function () {
+const Shichi = function () {
   const frame = useCurrentFrame();
-  const kanjiAssets = AssetsObject[7];
+  const kanjiAssets = LectureAssetsObj[6];
 
   const MainKanjiOpacity = interpolate(frame, [0, 10], [0, 1], {
     easing: Easing.inOut(Easing.ease),
@@ -49,13 +49,13 @@ const Hachi = function () {
     extrapolateRight: "clamp",
   });
 
-  const MnemonicsMoveRight = interpolate(frame, [170, 180], [-100, 30], {
+  const MnemonicsMoveRight = interpolate(frame, [230, 240], [-100, 30], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const InfoMoveRight = interpolate(frame, [170, 180], [50, 70], {
+  const InfoMoveRight = interpolate(frame, [230, 240], [50, 70], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -105,4 +105,4 @@ const Hachi = function () {
   );
 };
 
-export default Hachi;
+export default Shichi;

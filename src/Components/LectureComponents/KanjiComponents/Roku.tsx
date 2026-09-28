@@ -8,7 +8,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import styled from "styled-components";
-import AssetsObject from "../AssestsObj";
+import LectureAssetsObj from "../../../assets/AssestsObj";
 
 const Container = styled(AbsoluteFill)`
   position: relative;
@@ -29,33 +29,33 @@ const InfoContent = styled.div`
 
 const MainKanji = styled.p``;
 
-const Juu = function () {
+const Roku = function () {
   const frame = useCurrentFrame();
-  const kanjiAssets = AssetsObject[9];
+  const kanjiAssets = LectureAssetsObj[5];
 
   const MainKanjiOpacity = interpolate(frame, [0, 10], [0, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const MainRomajiOpacity = interpolate(frame, [75, 85], [0, 1], {
+  const MainRomajiOpacity = interpolate(frame, [15, 25], [0, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const MainEnglishTransOpacity = interpolate(frame, [130, 140], [0, 1], {
-    easing: Easing.inOut(Easing.ease),
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
-  const MnemonicsMoveRight = interpolate(frame, [165, 175], [-100, 30], {
+  const MainEnglishTransOpacity = interpolate(frame, [80, 90], [0, 1], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const InfoMoveRight = interpolate(frame, [165, 175], [50, 70], {
+  const MnemonicsMoveRight = interpolate(frame, [200, 210], [-100, 30], {
+    easing: Easing.inOut(Easing.ease),
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const InfoMoveRight = interpolate(frame, [200, 210], [50, 70], {
     easing: Easing.inOut(Easing.ease),
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -67,7 +67,7 @@ const Juu = function () {
         <MnemonicsContent style={{ left: `${MnemonicsMoveRight}%` }}>
           <Img
             src={staticFile(kanjiAssets.illustration)}
-            style={{ width: 700, height: 500 }}
+            style={{ width: 700, height: 400 }}
           />
         </MnemonicsContent>
         <InfoContent style={{ left: `${InfoMoveRight}%` }}>
@@ -105,4 +105,4 @@ const Juu = function () {
   );
 };
 
-export default Juu;
+export default Roku;

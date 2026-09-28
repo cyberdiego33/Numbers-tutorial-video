@@ -1,7 +1,7 @@
 import { AbsoluteFill, Sequence, staticFile } from "remotion";
 import Ichi from "./KanjiComponents/Ichi";
 import Ni from "./KanjiComponents/Ni";
-import AssetsObject, { getStart } from "./AssestsObj";
+import LectureAssetsObj, { getLectureDuration } from "../../assets/AssestsObj";
 import San from "./KanjiComponents/San";
 import Yon from "./KanjiComponents/Yon";
 import Go from "./KanjiComponents/Go";
@@ -31,63 +31,105 @@ const KanjiSequence = function () {
     HyakuAssets,
     SenAssets,
     ManAssets,
-  ] = AssetsObject;
+  ] = LectureAssetsObj;
 
   return (
     <>
-      <Sequence from={getStart(0)} durationInFrames={ichiAssets.duration}>
+      <Sequence
+        from={getLectureDuration(0)}
+        durationInFrames={ichiAssets.duration}
+      >
         <Ichi />
       </Sequence>
 
-      <Sequence from={getStart(1)} durationInFrames={niAssets.duration}>
+      <Sequence
+        from={getLectureDuration(1)}
+        durationInFrames={niAssets.duration}
+      >
         <Ni />
       </Sequence>
 
-      <Sequence from={getStart(2)} durationInFrames={sanAssets.duration}>
+      <Sequence
+        from={getLectureDuration(2)}
+        durationInFrames={sanAssets.duration}
+      >
         <San />
       </Sequence>
 
-      <Sequence from={getStart(3)} durationInFrames={yonAssets.duration}>
+      <Sequence
+        from={getLectureDuration(3)}
+        durationInFrames={yonAssets.duration}
+      >
         <Yon />
       </Sequence>
 
-      <Sequence from={getStart(4)} durationInFrames={goAssets.duration}>
+      <Sequence
+        from={getLectureDuration(4)}
+        durationInFrames={goAssets.duration}
+      >
         <Go />
       </Sequence>
 
-      <Sequence from={getStart(5)} durationInFrames={rokuAssets.duration}>
+      <Sequence
+        from={getLectureDuration(5)}
+        durationInFrames={rokuAssets.duration}
+      >
         <Roku />
       </Sequence>
 
-      <Sequence from={getStart(6)} durationInFrames={shichiAssets.duration}>
+      <Sequence
+        from={getLectureDuration(6)}
+        durationInFrames={shichiAssets.duration}
+      >
         <Shichi />
       </Sequence>
 
-      <Sequence from={getStart(7)} durationInFrames={hachiAssets.duration}>
+      <Sequence
+        from={getLectureDuration(7)}
+        durationInFrames={hachiAssets.duration}
+      >
         <Hachi />
       </Sequence>
 
-      <Sequence from={getStart(8)} durationInFrames={kyuuAssets.duration}>
+      <Sequence
+        from={getLectureDuration(8)}
+        durationInFrames={kyuuAssets.duration}
+      >
         <Kyuu />
       </Sequence>
 
-      <Sequence from={getStart(9)} durationInFrames={JuuAssets.duration}>
+      <Sequence
+        from={getLectureDuration(9)}
+        durationInFrames={JuuAssets.duration}
+      >
         <Juu />
       </Sequence>
 
-      <Sequence from={getStart(10)} durationInFrames={AfterJuuAssets.duration}>
+      <Sequence
+        from={getLectureDuration(10)}
+        durationInFrames={AfterJuuAssets.duration}
+      >
         <AfterJuu />
       </Sequence>
 
-      <Sequence from={getStart(11)} durationInFrames={HyakuAssets.duration}>
+      <Sequence
+        from={getLectureDuration(11)}
+        durationInFrames={HyakuAssets.duration}
+      >
         <Hyaku />
       </Sequence>
 
-      <Sequence from={getStart(12)} durationInFrames={SenAssets.duration}>
+      <Sequence
+        from={getLectureDuration(12)}
+        durationInFrames={SenAssets.duration}
+      >
         <Sen />
       </Sequence>
 
-      <Sequence from={getStart(13)} durationInFrames={ManAssets.duration}>
+      <Sequence
+        from={getLectureDuration(13)}
+        durationInFrames={ManAssets.duration}
+      >
         <Man />
       </Sequence>
     </>
