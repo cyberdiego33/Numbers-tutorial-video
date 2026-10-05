@@ -101,7 +101,7 @@ const Floatingkanjis = styled.div`
 
 const ClosingComponent = function () {
   const frame = useCurrentFrame();
-  const { title, topic, Narration } = ClosingAssetsObj;
+  const { title, topic, Narration, BackgroundMusic, volume } = ClosingAssetsObj;
 
   const glowLocalFrame1 = (frame - 60) % 60;
   const glowAnimation1 = interpolate(
@@ -120,10 +120,6 @@ const ClosingComponent = function () {
   );
 
   const TitleAnimateIn = interpolate(frame, [0, 30], [-120, 0], {
-    easing: Easing.in(Easing.ease),
-  });
-
-  const TopicAnimateOpacity = interpolate(frame, [300, 310], [0, 1], {
     easing: Easing.in(Easing.ease),
   });
 
@@ -187,9 +183,10 @@ const ClosingComponent = function () {
           </Floatingkanjis>
         );
       })}
-      <Sequence from={60}>
+      <Sequence from={90}>
         <Html5Audio src={staticFile(Narration)} />
       </Sequence>
+      <Html5Audio src={staticFile(BackgroundMusic)} volume={volume} />
     </AbsoluteFill>
   );
 };

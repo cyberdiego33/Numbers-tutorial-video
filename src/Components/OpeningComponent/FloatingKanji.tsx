@@ -101,7 +101,7 @@ const Floatingkanjis = styled.div`
 
 const FloatingKanji = function () {
   const frame = useCurrentFrame();
-  const { title, topic, Narration } = OpeningAssetsObj;
+  const { title, topic, Narration, BackgroundMusic, volume } = OpeningAssetsObj;
 
   const glowLocalFrame1 = (frame - 60) % 60;
   const glowAnimation1 = interpolate(
@@ -195,6 +195,7 @@ const FloatingKanji = function () {
       <Sequence from={60}>
         <Html5Audio src={staticFile(Narration)} />
       </Sequence>
+      <Html5Audio src={staticFile(BackgroundMusic)} volume={volume} />
     </AbsoluteFill>
   );
 };

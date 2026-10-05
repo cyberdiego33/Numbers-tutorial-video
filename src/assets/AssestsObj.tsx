@@ -7,7 +7,7 @@ const LectureAssetsObj = [
     illustration1: "images/ichi-illustration-1.png",
     illustration2: "images/ichi-illustration-2.png",
     narration: "audio3/ichi-narration.wav",
-    duration: 610,
+    duration: 620,
   },
   {
     index: 2,
@@ -17,7 +17,7 @@ const LectureAssetsObj = [
     illustration1: "images/ni-illustration-1.png",
     illustration2: "images/ni-illustration-2.png",
     narration: "audio3/Ni-narration.wav",
-    duration: 475,
+    duration: 505,
   },
   {
     index: 3,
@@ -26,7 +26,7 @@ const LectureAssetsObj = [
     romaji: "three",
     illustration: "images/san-illustration.png",
     narration: "audio3/San-narration.wav",
-    duration: 425,
+    duration: 445,
   },
   {
     index: 4,
@@ -35,7 +35,7 @@ const LectureAssetsObj = [
     romaji: "four",
     illustration: "images/yon-illustration.png",
     narration: "audio3/Yon-narration.wav",
-    duration: 565,
+    duration: 595,
   },
   {
     index: 5,
@@ -44,7 +44,7 @@ const LectureAssetsObj = [
     romaji: "five",
     illustration: "images/go-illustration.png",
     narration: "audio3/Go-narration.wav",
-    duration: 815,
+    duration: 845,
   },
   {
     index: 6,
@@ -53,7 +53,7 @@ const LectureAssetsObj = [
     romaji: "six",
     illustration: "images/roku-illustration.png",
     narration: "audio3/Roku-narration.wav",
-    duration: 770,
+    duration: 790,
   },
   {
     index: 7,
@@ -62,7 +62,7 @@ const LectureAssetsObj = [
     romaji: "seven",
     illustration: "images/shichi-illustration.png",
     narration: "audio/Shichi-narration.wav",
-    duration: 500,
+    duration: 530,
   },
   {
     index: 8,
@@ -71,7 +71,7 @@ const LectureAssetsObj = [
     romaji: "eight",
     illustration: "images/hachi-illustration.png",
     narration: "audio/Hachi-narration.wav",
-    duration: 490,
+    duration: 520,
   },
   {
     index: 9,
@@ -80,7 +80,7 @@ const LectureAssetsObj = [
     romaji: "nine",
     illustration: "images/kyuu-illustration.png",
     narration: "audio/Kyuu-narration.wav",
-    duration: 535,
+    duration: 565,
   },
   {
     index: 10,
@@ -89,7 +89,7 @@ const LectureAssetsObj = [
     romaji: "ten",
     illustration: "images/juu-illustration.png",
     narration: "audio/Juu-narration.wav",
-    duration: 620,
+    duration: 650,
   },
   {
     index: 11,
@@ -142,20 +142,25 @@ export const OpeningAssetsObj = {
   title: "Learning Kanji with Mnemonics",
   topic: "Numbers",
   Narration: "audio3/Opening-narration.wav",
-  duration: 650,
+  duration: 680,
+  BackgroundMusic: "audio3/Opening-Background-music.wav",
+  volume: 0.05,
 };
 
 export const ClosingAssetsObj = {
   title: "Learning Kanji with Mnemonics",
   topic: "Numbers",
   Narration: "audio3/Closing-narration.wav",
-  duration: 1685,
+  duration: 1800,
+  BackgroundMusic: "audio3/Closing-Background-music.wav",
+  volume: 0.05,
 };
 
 export const TotalDurations = {
   openingSceneDuration: OpeningAssetsObj.duration,
   closingSceneDuration: ClosingAssetsObj.duration,
   lectureSceneDuration: getLectureDuration(14),
+
   videoTotalduration:
     OpeningAssetsObj.duration +
     ClosingAssetsObj.duration +
